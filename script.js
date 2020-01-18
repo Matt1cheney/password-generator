@@ -51,7 +51,6 @@ function writePassword(upper, lower, number, symbol, length) {
       
       let funcName = Object.keys(typesArr[Math.floor(Math.random() * typesArr.length)])[0]
       
-      console.log('funcName', funcName);
       
       writePassword += randomFunction[funcName]();
     };
