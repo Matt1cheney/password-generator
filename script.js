@@ -61,28 +61,23 @@ let finalPassword = writePassword.slice(0, length);
 return finalPassword;
 }
 
-class Generator {
-  constructor(prop1,prop2) {
-this.prop1= prop1;
-  }
-
 
 // character functions
- getRandomUpper() {
+ const getRandomUpper = () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
- getRandomLower() {
+ const getRandomLower= () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
- getRandomNumber() {
+ const getRandomNumber = () => {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
- getRandomSymbol() {
+ const getRandomSymbol = () => {
   let symbols = '!@#$%^&*()_+{}[]<>,.'
   return symbols[Math.floor(Math.random() * 20)]
   
 }
-}
+
 // attached event listener 
 generateBtn.addEventListener('click', () => {
   let length = +numberLength.value;
