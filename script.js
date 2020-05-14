@@ -12,7 +12,24 @@ let symbols = document.getElementById('symbols');
 let generate = document.getElementById('generate');
 let clipboard = document.getElementById('clipboard');
 
-// functions on bottom
+
+
+// character functions
+const getRandomUpper = () => {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+ const getRandomLower= () => {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+ const getRandomNumber = () => {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+ const getRandomSymbol = () => {
+  let symbols = '!@#$%^&*()_+{}[]<>,.'
+  return symbols[Math.floor(Math.random() * 20)]
+  
+}
+
 let randomFunction = {
   upper: getRandomUpper,
   lower: getRandomLower,
@@ -62,21 +79,6 @@ return finalPassword;
 }
 
 
-// character functions
- const getRandomUpper = () => {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
- const getRandomLower= () => {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
- const getRandomNumber = () => {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
- const getRandomSymbol = () => {
-  let symbols = '!@#$%^&*()_+{}[]<>,.'
-  return symbols[Math.floor(Math.random() * 20)]
-  
-}
 
 // attached event listener 
 generateBtn.addEventListener('click', () => {
